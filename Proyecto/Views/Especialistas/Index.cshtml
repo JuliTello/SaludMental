@@ -1,0 +1,49 @@
+﻿@using Proyecto.Utilities
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-15">
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex justify-content-between">
+                    <h2>Especialistas</h2>
+                    <div>
+                        @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Paciente))
+                        {
+                            <a class="btn btn-primary" asp-controller="Especialistas" asp-action="Create">
+                                <i class="bi bi-plus-square"></i> Nuevo
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-lg table-striped" id="table_especialistas">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre Usuario</th>
+                                <th>Nombres y Apellidos</th>
+                                <th>Telefono</th>
+                                <th>Email</th>
+                                <th>Edad</th>
+                                <th>Genero</th>
+                                <th>Código Colegiatura</th>
+                                <th>Especialidad</th>
+                                <th width="120px">Opciones</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/especialista.js"></script>
+}

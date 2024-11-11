@@ -1,0 +1,52 @@
+﻿@model Proyecto.Models.ViewModels.MensajeriaVM
+@{
+    ViewData["Title"] = "Editar Mensaje";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h2>Editar Mensaje</h2>
+            </div>
+            <div class="card-body">
+                <form asp-controller="Mensajerias" asp-action="Edit" method="post">
+                    <input type="hidden" asp-for="Mensajeria.MensajeriaId" />
+                    <div class="form-group mb-2">
+                        <label class="form-label">Especialista</label>
+                        <select asp-for="Mensajeria.EspecialistaId" asp-items="Model.EspecialistaList" class="form-select" id="especialistaId">
+                            <option disabled selected>--Seleccione un Especialista--</option>
+                        </select>
+                        <span asp-validation-for="Mensajeria.EspecialistaId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Mensaje</label>
+                        <textarea class="form-control" asp-for="Mensajeria.Mensaje" placeholder="Ingrese Descripcion del Test" id="info"></textarea>
+                        <span asp-validation-for="Mensajeria.Mensaje" class="text-danger"></span>
+                    </div>
+                    <div class="d-grid column-gap-2 d-md-block offset-0 offset-md-3 offset-lg-4">
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-download"></i>&nbsp; Actualizar
+                        </button>
+                        <a asp-controller="Mensajerias" asp-action="Index" class="btn btn-primary">
+                            <i class="bi bi-arrow-return-left"></i>&nbsp;Cancelar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#especialistaId').select2();
+            $('#info').summernote();
+        });
+    </script>
+
+}
+
+

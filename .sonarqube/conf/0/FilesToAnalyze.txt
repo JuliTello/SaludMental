@@ -1,0 +1,12 @@
+﻿D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Models\ApplicationUser.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Models\Cita.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Models\ErrorViewModel.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Models\Especialista.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Models\Mensajeria.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Models\Paciente.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Models\Test.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Models\TestDetail.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Models\Usuario.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Models\ViewModels\CitaVM.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Models\ViewModels\MensajeriaVM.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Models\ViewModels\TestDetailVM.cs

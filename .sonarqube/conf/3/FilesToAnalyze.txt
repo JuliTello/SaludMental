@@ -1,0 +1,16 @@
+﻿D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Implementations\ApplicationUserRepository.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Implementations\CitaRepository.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Implementations\EspecialistaRepository.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Implementations\MensajeriaRepository.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Implementations\RepositoryBase.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Implementations\TestDetailRepository.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Implementations\TestRepository.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Implementations\UnitWork.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Interfaces\IApplicationUserRepository.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Interfaces\ICitaRepository.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Interfaces\IEspecialistaRepository.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Interfaces\IMensajeriaRepository.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Interfaces\IRepositoryBase.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Interfaces\ITestDetailRepository.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Interfaces\ITestRepository.cs
+D:\Archivos\ING. EN SISTEMAS COMPUTACIONALES\8VO CICLO\Calidad y Pruebas de Software\Test\Proyecto\Proyecto.Repositories\Interfaces\IUnitWork.cs

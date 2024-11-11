@@ -1,0 +1,33 @@
+﻿@model Proyecto.Models.ViewModels.MensajeriaVM
+@{
+    ViewData["Title"] = "Detalle Mensaje";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h2>Detalle Mensajería</h2>
+            </div>
+            <div class="card-body">
+                <form asp-controller="Mensajerias" asp-action="Details" method="post">
+                    <input type="hidden" asp-for="Mensajeria.MensajeriaId" />
+                    <div class="row mb-2 border-bottom">
+                        <div class="col-4 text-end fw-bold" style="text-align: center; white-space:pre-wrap">Especialista</div>
+                        <div class="col-8">@Model.Mensajeria.Especialista.FirstName @Model.Mensajeria.Especialista.LastName</div>
+                    </div>
+                    <div class="row mb-2 border-bottom">
+                        <div class="col-4 text-end fw-bold">Mensaje</div>
+                        <div class="col-8">@Html.Raw(@Model.Mensajeria.Mensaje)</div>
+                    </div>
+                    <div class="d-grid column-gap-2 d-md-block offset-0 offset-md-3 offset-lg-4">                       
+                        <a asp-controller="Mensajerias" asp-action="Index" class="btn btn-primary">
+                            <i class="bi bi-arrow-return-left"></i>&nbsp;Regresar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

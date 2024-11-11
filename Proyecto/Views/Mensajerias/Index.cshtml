@@ -1,0 +1,43 @@
+﻿@using Proyecto.Utilities
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex justify-content-between">
+                    <h2>Mensajes</h2>
+                    <div>
+                        @if (User.IsInRole(DS.Role_Admin) || User.IsInRole(DS.Role_Paciente) || User.IsInRole(DS.Role_Especialista))
+                        {
+                            <a class="btn btn-primary" asp-controller="Mensajerias" asp-action="Create">
+                                <i class="bi bi-plus-square"></i> Nuevo
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-sm table-striped" id="table_mensajerias">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Especialista</th>
+                                <th>Fecha Envio</th>
+                                <th width="120px">Opciones</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/mensajeria.js"></script>
+}

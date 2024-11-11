@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Proyecto.Models.Especialista>
+@{
+    ViewData["Title"] = "Tarjetas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model != null && Model.Any())
+{
+    @foreach (var item in Model)
+    {
+        if (item != null)
+        {
+            <div class="card mb-3" style="width:900px; ">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1085/1085413.png"
+                             class="img-fluid rounded-start" alt="Foto Especialista">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">@item?.LastName @item?.FirstName</h5>
+                            <p class="card-text">Informacion Adicional: @Html.Raw(@item?.Info)</p>
+                            <p class="card-text"> Especialidad : @item?.Especialidad</p>
+                            <a href="/Especialistas/Details/@item.EspecialistaId" class="btn btn-primary">Más Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+}
+else
+{
+    <p class="text-info">No hay registros para mostrar</p>
+}
+
+
+

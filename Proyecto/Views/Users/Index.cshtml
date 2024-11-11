@@ -1,0 +1,77 @@
+﻿@model RegisterModel
+@using Proyecto.Areas.Identity.Pages.Account
+@using Proyecto.Utilities
+
+@{
+    ViewData["Title"] = "Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex justify-content-between">
+                    <h2>Usuarios</h2>
+                    <div>
+                        <a class="btn btn-primary" asp-area="Identity" asp-page="/Account/Register">
+                            <i class="bi bi-plus-square"></i> Nuevo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-sm table-striped" id="table_users">
+                        <thead>
+                            <tr>
+                                <th>Opc.</th>
+                                <th>Nombres</th>
+                                <th>Email</th>
+                                <th>Teléfono</th>
+                                <th>Roles</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para cambiar el rol -->
+<div class="modal fade" id="changeRoleModal" tabindex="-1" aria-labelledby="changeRoleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="changeRoleModalLabel">Cambiar Rol de Usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="changeRoleForm">
+                    <input type="hidden" id="userId" name="userId">
+                    <div class="mb-3">
+                        <label for="roleSelect" class="form-label">Seleccionar Rol</label>
+                        <select class="form-select" id="roleSelect" name="roleSelect">
+                            <option value="Admin">Admin</option>
+                            <option value="Paciente">Paciente</option>
+                            <option value="Especialista">Especialista</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="guardarCambiosRol()">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/sweetalert/sweetalert.min.js"></script>
+    <script src="~/lib/toastr/toastr.min.js"></script>
+    <script src="~/js/user.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+}

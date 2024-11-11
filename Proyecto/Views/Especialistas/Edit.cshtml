@@ -1,0 +1,98 @@
+﻿@model Proyecto.Models.Especialista
+@{
+    ViewData["Title"] = "Editar Especialista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h2>Editar Especialista</h2>
+            </div>
+            <div class="card-body">
+                <form asp-controller="Especialistas" asp-action="Edit" method="post">
+                    <input type="hidden" asp-for="EspecialistaId" />
+                    <div class="form-group mb-2">
+                        <label class="form-label">Nombre Usuario</label>
+                        <input class="form-control" asp-for="UserName" placeholder="Ingrese Nombre de Usuario" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Apellidos</label>
+                        <input class="form-control" asp-for="LastName" placeholder="Ingrese Apellidos" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Nombres</label>
+                        <input class="form-control" asp-for="FirstName" placeholder="Ingrese Nombres" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Telefono</label>
+                        <input class="form-control" asp-for="PhoneNumber" placeholder="Ingrese su Telefono" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Correo</label>
+                        <input class="form-control" asp-for="Email" placeholder="Ingrese Correo" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Edad</label>
+                        <input class="form-control" asp-for="Age" placeholder="Ingrese Edad" />
+                        <span asp-validation-for="Age" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Genero</label>
+                        <select asp-for="Gender" class="form-select">
+                            <option selected>Seleccione su Genero....</option>
+                            <option value="Hombre">Masculino</option>
+                            <option value="Mujer">Femenino</option>
+                            <option value="Otros">Otros</option>
+                            <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                        </select>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Contraseña</label>
+                        <input class="form-control" asp-for="Password" placeholder="Ingrese su Genero" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Codigo Colegiatura</label>
+                        <input class="form-control" asp-for="CodigoColegiatura" placeholder="Ingrese su Cdigo Colegiatura" />
+                        <span asp-validation-for="CodigoColegiatura" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Especialidad</label>
+                        <input class="form-control" asp-for="Especialidad" placeholder="Ingrese su Especialidad" />
+                        <span asp-validation-for="Especialidad" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Informacion</label>
+                        <textarea class="form-control" asp-for="Info" placeholder="Ingrese su Información Adicional" id="info"></textarea>
+                        <span asp-validation-for="Info" class="text-danger"></span>
+                    </div>
+                    <div class="d-grid column-gap-2 d-md-block offset-0 offset-md-3 offset-lg-4">
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-floppy"></i>&nbsp; Actualizar
+                        </button>
+                        <a asp-controller="Especialistas" asp-action="Index" class="btn btn-primary">
+                            <i class="bi bi-arrow-return-left"></i>&nbsp;Cancelar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#info').summernote();
+        });
+    </script>
+
+}

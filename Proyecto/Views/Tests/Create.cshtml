@@ -1,0 +1,71 @@
+﻿@model Proyecto.Models.Test
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h2>Nuevo Test</h2>
+            </div>
+            <div class="card-body">
+                <form asp-controller="Tests" asp-action="Create" method="post">
+                    <div class="form-group mb-2">
+                        <label class="form-label">Nombre Test</label>
+                        <input class="form-control" asp-for="NombreTest" placeholder="Ingrese Nombre del Test" />
+                        <span asp-validation-for="NombreTest" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Descripcion</label>
+                        <textarea class="form-control" asp-for="Descripcion" placeholder="Ingrese Descripcion del Test" id="info"></textarea>
+                        <span asp-validation-for="Descripcion" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Pregunta 1</label>
+                        <textarea class="form-control" asp-for="Pregunta1" placeholder="Ingrese Pregunta 1 del Test" id="info"></textarea>
+                        <span asp-validation-for="Pregunta1" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Pregunta 2</label>
+                        <textarea class="form-control" asp-for="Pregunta2" placeholder="Ingrese Pregunta 2 del Test" id="info"></textarea>
+                        <span asp-validation-for="Pregunta2" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Pregunta 3</label>
+                        <textarea class="form-control" asp-for="Pregunta3" placeholder="Ingrese Pregunta 3 del Test" id="info"></textarea>
+                        <span asp-validation-for="Pregunta3" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Pregunta 4</label>
+                        <textarea class="form-control" asp-for="Pregunta4" placeholder="Ingrese Pregunta 4 del Test" id="info"></textarea>
+                        <span asp-validation-for="Pregunta4" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Pregunta 5</label>
+                        <textarea class="form-control" asp-for="Pregunta5" placeholder="Ingrese Pregunta 5 del Test" id="info"></textarea>
+                        <span asp-validation-for="Pregunta5" class="text-danger"></span>
+                    </div>
+                    <div class="d-grid column-gap-2 d-md-block offset-0 offset-md-3 offset-lg-4">
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-floppy"></i>&nbsp; Guardar
+                        </button>
+                        <a asp-controller="Tests" asp-action="Index" class="btn btn-primary">
+                            <i class="bi bi-arrow-return-left"></i>&nbsp;Cancelar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#info').summernote();
+        });
+    </script>
+
+}

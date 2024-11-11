@@ -1,0 +1,185 @@
+﻿@model Proyecto.Models.Test
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h2>Realizar Test</h2>
+            </div>
+            <div class="card-body">
+                <form id="testForm" asp-controller="Tests" asp-action="Details" method="post">
+                    <input type="hidden" name="testId" value="@Model.TestId" />
+                    <input type="hidden" id="resultado" name="resultado" value="0" />
+                    <div class="form-group mb-2">
+                        <label class="form-label">Nombre Test: @Model.NombreTest</label>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Descripcion: @Html.Raw(@Model.Descripcion)</label>
+                    </div>
+
+                    <!-- Pregunta 1 -->
+                    <div class="form-group mb-2">
+                        <label class="form-label">Pregunta 1: @Model.Pregunta1</label> <br />
+                        <div class="form-check form-check-inline" style="align-items: center;">
+                            <input type="radio" name="pregunta1" value="0" class="form-check-input" id="pregunta1-0">
+                            <label class="form-check-label" for="pregunta1-0">Nunca</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="pregunta1" value="1" class="form-check-input" id="pregunta1-1">
+                            <label class="form-check-label" for="pregunta1-1">A veces</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="pregunta1" value="2" class="form-check-input" id="pregunta1-2">
+                            <label class="form-check-label" for="pregunta1-2">A menudo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="pregunta1" value="3" class="form-check-input" id="pregunta1-3">
+                            <label class="form-check-label" for="pregunta1-3">Siempre</label>
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="form-group mb-2">
+                        <label class="form-label">Pregunta 2: @Model.Pregunta2</label>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta2" value="0" class="form-check-input" id="pregunta2-0">
+                            <label class="form-check-label" for="pregunta2-0">Nunca</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta2" value="1" class="form-check-input" id="pregunta2-1">
+                            <label class="form-check-label" for="pregunta2-1">A veces</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta2" value="2" class="form-check-input" id="pregunta2-2">
+                            <label class="form-check-label" for="pregunta2-2">A menudo</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta2" value="3" class="form-check-input" id="pregunta2-3">
+                            <label class="form-check-label" for="pregunta2-3">Siempre</label>
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 3 -->
+                    <div class="form-group mb-2">
+                        <label class="form-label">Pregunta 3: @Model.Pregunta3</label>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta3" value="0" class="form-check-input" id="pregunta3-0">
+                            <label class="form-check-label" for="pregunta3-0">Nunca</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta3" value="1" class="form-check-input" id="pregunta3-1">
+                            <label class="form-check-label" for="pregunta3-1">A veces</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta3" value="2" class="form-check-input" id="pregunta3-2">
+                            <label class="form-check-label" for="pregunta3-2">A menudo</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta3" value="3" class="form-check-input" id="pregunta3-3">
+                            <label class="form-check-label" for="pregunta3-3">Siempre</label>
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 4 -->
+                    <div class="form-group mb-2">
+                        <label class="form-label">Pregunta 4: @Model.Pregunta4</label>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta4" value="0" class="form-check-input" id="pregunta4-0">
+                            <label class="form-check-label" for="pregunta4-0">Nunca</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta4" value="1" class="form-check-input" id="pregunta4-1">
+                            <label class="form-check-label" for="pregunta4-1">A veces</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta4" value="2" class="form-check-input" id="pregunta4-2">
+                            <label class="form-check-label" for="pregunta4-2">A menudo</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta4" value="3" class="form-check-input" id="pregunta4-3">
+                            <label class="form-check-label" for="pregunta4-3">Siempre</label>
+                        </div>
+                    </div>
+
+                    <!-- Pregunta 5 -->
+                    <div class="form-group mb-2">
+                        <label class="form-label">Pregunta 5: @Model.Pregunta5</label>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta5" value="0" class="form-check-input" id="pregunta5-0">
+                            <label class="form-check-label" for="pregunta5-0">Nunca</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta5" value="1" class="form-check-input" id="pregunta5-1">
+                            <label class="form-check-label" for="pregunta5-1">A veces</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta5" value="2" class="form-check-input" id="pregunta5-2">
+                            <label class="form-check-label" for="pregunta5-2">A menudo</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="pregunta5" value="3" class="form-check-input" id="pregunta5-3">
+                            <label class="form-check-label" for="pregunta5-3">Siempre</label>
+                        </div>
+                    </div>
+
+                    <div class="d-grid column-gap-2 d-md-block offset-0 offset-md-3 offset-lg-4">
+                        <button type="button" class="btn btn-success" onclick="calcularPuntuacion()">
+                            <i class="bi bi-floppy"></i>&nbsp; Guardar
+                        </button>
+                        <a asp-controller="Tests" asp-action="Index" class="btn btn-primary">
+                            <i class="bi bi-arrow-return-left"></i>&nbsp;Cancelar
+                        </a>
+                    </div>
+                </form>
+                <div id="puntuacion" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para mostrar el resultado -->
+<div class="modal fade" id="resultadoModal" tabindex="-1" role="dialog" aria-labelledby="resultadoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="resultadoModalLabel">Resultado del Test</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Tu puntuación total es : <span id="resultadoTexto"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="enviarFormulario()">Terminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+        function calcularPuntuacion() {
+            var puntuacionTotal = 0;
+            for (var i = 1; i <= 5; i++) {
+                var radios = document.getElementsByName('pregunta' + i);
+                for (var j = 0; j < radios.length; j++) {
+                    if (radios[j].checked) {
+                        puntuacionTotal += parseInt(radios[j].value);
+                    }
+                }
+            }
+            document.getElementById('resultado').value = puntuacionTotal;
+            document.getElementById('resultadoTexto').innerText = puntuacionTotal;
+
+            $('#resultadoModal').modal('show');
+        }
+
+        function enviarFormulario() {
+            document.getElementById('testForm').submit();
+        }
+    </script>
+}
